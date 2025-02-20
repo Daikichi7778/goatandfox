@@ -1,0 +1,44 @@
+#チャレンジタッチ3 #android #改造 #開発者向けオプション #パスワード解除 (update.zipのダウンロード方法付き)
+
+チャレンジタッチ NEO・NEXTは、他の方法を使ってください
+
+参考↓
+https://zenn.dev/s1204it/articles/16fce85441821f#02.05.000-以上の場合はどうすれば良い？
+
+解除方法について
+
+やり方
+
+PowerShellで以下のコマンドを実行します↓
+1つ目
+
+かっこも含みます
+
+ちなみにcdコマンドでダウンロードフォルダなどを指定することをおすすめします
+
+(Invoke-WebRequest -Method Get -Uri https://s1204.me/benesse -UseBasicParsing).Content | Set-Content -Path .\GetSecureFiles.ps1 -Encoding UTF8
+
+
+2つ目
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+3つ目
+
+.\GetSecureFiles.ps1
+
+次に有効な進研ゼミの会員番号とパスワードを入力して
+
+"pathを入力"と出るまでエンターキーを押します
+
+"pathを入力"が表示されたら以下の文字をコピペします↓
+
+/authorized/appli/common/a04br3-ota-01.06.000_full.zip
+
+しばらくするとa04br3-ota-01.06.000_full.zipというファイルがダウンロードされるのでエクスプローラーを開くとa04br3-ota-01.06.000_full.zipというファイルがあるので update.zipという名前に変更して、マイクロSDカードの直下にコピーします
+
+できたらチャレンジタッチ3にSDカードを入れて
+
+タブレット情報から、システムアップデートをタッチしてシステムアップデートを開始しますをタッチします
+
+しばらくするとシステムアップデートが始まりアップデート後に開発者向けオプションを開くとパスワードが解除されます。
